@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="LbR-SD-G96">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhZ-ll-NSy">
+                                <rect key="frame" x="20" y="428" width="374" height="50"/>
+                                <color key="backgroundColor" name="DarkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3iZ-hU-aMi"/>
+                                </constraints>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginbuttonTapped:" destination="PIT-7e-yS1" eventType="touchUpInside" id="Hdx-ee-vca"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iqf-iS-Ylf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZhZ-ll-NSy" firstAttribute="centerY" secondItem="iqf-iS-Ylf" secondAttribute="centerY" id="XFs-La-ZTX"/>
+                            <constraint firstItem="ZhZ-ll-NSy" firstAttribute="leading" secondItem="iqf-iS-Ylf" secondAttribute="leading" constant="20" id="bXa-M8-mxc"/>
+                            <constraint firstItem="iqf-iS-Ylf" firstAttribute="trailing" secondItem="ZhZ-ll-NSy" secondAttribute="trailing" constant="20" id="i4D-FL-Jst"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="ZhZ-ll-NSy" id="E3i-EJ-8p5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uta-uw-k0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +49,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="DarkGreen">
+            <color red="0.23299999535083771" green="0.52899998426437378" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
