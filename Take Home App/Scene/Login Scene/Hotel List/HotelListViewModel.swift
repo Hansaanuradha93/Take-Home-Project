@@ -5,6 +5,7 @@ final class HotelListViewModel {
     
     let title = "List View"
     var user: User? = nil
+    var hotels: [Hotel] = []
     
     init() {
         guard let fullName = DataStore.shared.getFullName(),
@@ -46,5 +47,17 @@ extension HotelListViewModel {
         let loginManager = LoginManager()
         loginManager.logOut()
         completion(true)
+    }
+    
+    func fetchHotels(completion: @escaping(_ status: Bool, _ message: String) -> Void) {
+        NetworkManager.shared.getHotels { result in
+            switch result {
+            case .success(let hotels):
+                self.hotels = hotels
+                completion(false, "")
+            case .failure(let error):
+                completion(false, error.localizedDescription)
+            }
+        }
     }
 }

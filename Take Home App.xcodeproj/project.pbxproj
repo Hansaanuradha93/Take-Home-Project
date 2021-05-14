@@ -164,11 +164,11 @@
 		474572C6264E439B00D762C7 /* Take Home App */ = {
 			isa = PBXGroup;
 			children = (
-				47294A12264E74E7000551CD /* Network */,
 				474572E1264E464E00D762C7 /* Model */,
 				474572E2264E466900D762C7 /* Scene */,
 				47457305264E4DE400D762C7 /* Extensions */,
 				47294A07264E6A16000551CD /* Helpers */,
+				47294A12264E74E7000551CD /* Network */,
 				474572DE264E45A700D762C7 /* Support Files */,
 			);
 			path = "Take Home App";

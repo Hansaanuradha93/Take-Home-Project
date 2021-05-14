@@ -23,6 +23,7 @@ class HotelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchHotels()
     }
 }
 
@@ -88,6 +89,15 @@ extension HotelListViewController: UITableViewDelegate {
 
 // MARK: - Methods
 private extension HotelListViewController {
+    
+    func fetchHotels() {
+        viewModel.fetchHotels { [weak self] status, message  in
+            guard let self = self else { return }
+            if status {
+                DispatchQueue.main.async { self.tableView.reloadData() }
+            }
+        }
+    }
     
     func logout() {
         viewModel.logOut { [weak self] status in
