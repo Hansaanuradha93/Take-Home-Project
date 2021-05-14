@@ -23,5 +23,23 @@ class LoginViewController: UIViewController {
     // MARK: Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+}
+
+// MARK: - Methods
+private extension LoginViewController {
+    
+    func setupUI() {
+        navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
+//        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Login"
+        
+//        firstNameTextField.autocorrectionType = .no
+//        emailTextField.keyboardType = .emailAddress
+//        emailTextField.autocorrectionType = .no
+//        passwordTextField.isSecureTextEntry = true
+//        passwordTextField.autocorrectionType = .no
+//        signupButton.isEnabled = false
     }
 }
