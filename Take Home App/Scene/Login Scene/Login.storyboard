@@ -47,6 +47,21 @@
             </objects>
             <point key="canvasLocation" x="343" y="131"/>
         </scene>
+        <!--Hotel List View Controller-->
+        <scene sceneID="N9u-d7-oGz">
+            <objects>
+                <viewController storyboardIdentifier="HotelListViewController" id="cJR-rb-jto" customClass="HotelListViewController" customModule="Take_Home_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Veu-y0-5QP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xEL-mP-tiH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22q-Zr-oGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="118"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="DarkGreen">

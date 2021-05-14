@@ -19,7 +19,6 @@ class LoginViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var loginButton: UIButton!
     
-    
     // MARK: Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +38,16 @@ private extension LoginViewController {
         viewModel.loginWithFacebook(controller: self) { [weak self] status, message in
             guard let self = self else { return }
             if status {
-                // TODO: go to next screen
-                print(message)
+                self.navigateToHotelList()
             } else {
                 self.presentAlert(title: "Failed", message: message, buttonTitle: "Ok")
             }
         }
+    }
+    
+    func navigateToHotelList() {
+        let controller = HotelListViewController.create(viewModel: HotelListViewModel())
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func setupUI() {

@@ -13,8 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Check user's authenntication status
         if let token = AccessToken.current, !token.isExpired {
             // User is logged in, do work such as go to next view controller.
-            controller = UIViewController()
-            controller.view.backgroundColor = .red
+            controller = HotelListViewController.create(viewModel: HotelListViewModel())
         }
         
         let window = UIWindow(windowScene: windowScene)
