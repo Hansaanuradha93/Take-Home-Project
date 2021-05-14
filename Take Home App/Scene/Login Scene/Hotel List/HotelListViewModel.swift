@@ -43,6 +43,10 @@ extension HotelListViewModel {
         return sections.count
     }
     
+    func numberOfHotels() -> Int {
+        return hotels.count
+    }
+    
     func logOut(completion: @escaping(_ status: Bool) -> Void) {
         let loginManager = LoginManager()
         loginManager.logOut()
@@ -54,7 +58,7 @@ extension HotelListViewModel {
             switch result {
             case .success(let hotels):
                 self.hotels = hotels
-                completion(false, "")
+                completion(true, "")
             case .failure(let error):
                 completion(false, error.localizedDescription)
             }

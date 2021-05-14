@@ -41,7 +41,7 @@ extension HotelListViewController: UITableViewDataSource {
         case .Profile:
             return 1
         case .Hotel:
-            return 5
+            return viewModel.numberOfHotels()
         }
     }
     
@@ -62,7 +62,9 @@ extension HotelListViewController: UITableViewDataSource {
             return cell
         case .Hotel:
             let cell = tableView.dequeueReusableCell(withIdentifier: HotelCell.reuseID, for: indexPath) as! HotelCell
-            cell.setup()
+            if viewModel.hotels.count > 0 {
+                cell.setup(hotel: viewModel.hotels[indexPath.row])
+            }
             return cell
         }
     }
