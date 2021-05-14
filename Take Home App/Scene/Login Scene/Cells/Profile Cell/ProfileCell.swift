@@ -27,7 +27,12 @@ class ProfileCell: UITableViewCell {
 // MARK: - Methods
 extension ProfileCell {
     
-    func setupViews() {
+    func setup(user: User) {
+        nameLabel.text = user.fullName
+        emailLabel.text = user.email
+    }
+    
+    private func setupViews() {
         logoutButton.layer.cornerRadius = 5
     }
 }

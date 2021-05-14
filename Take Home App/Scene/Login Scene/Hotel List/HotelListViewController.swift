@@ -50,6 +50,11 @@ extension HotelListViewController: UITableViewDataSource {
         switch section.sectionType {
         case .Profile:
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.reuseID, for: indexPath) as! ProfileCell
+            
+            if let user = viewModel.user {
+                cell.setup(user: user)
+            }
+            
             cell.buttonAction = {
                 self.logout()
             }

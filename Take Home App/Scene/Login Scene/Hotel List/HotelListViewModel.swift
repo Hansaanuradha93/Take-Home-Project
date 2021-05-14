@@ -4,6 +4,13 @@ import FBSDKLoginKit
 final class HotelListViewModel {
     
     let title = "List View"
+    var user: User? = nil
+    
+    init() {
+        guard let fullName = DataStore.shared.getFullName(),
+              let email = DataStore.shared.getEmail() else { return }
+        self.user = User(fullName: fullName, email: email)
+    }
     
     enum SectionType {
         case Profile

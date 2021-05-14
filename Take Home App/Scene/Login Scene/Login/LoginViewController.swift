@@ -35,9 +35,11 @@ class LoginViewController: UIViewController {
 private extension LoginViewController {
     
     func loginWithFacebook() {
-        viewModel.loginWithFacebook(controller: self) { [weak self] status, message in
+        viewModel.loginWithFacebook(controller: self) { [weak self] status, message, user in
             guard let self = self else { return }
             if status {
+                guard let user = user else { return }
+                user.saveUser()
                 self.navigateToHotelList()
             } else {
                 self.presentAlert(title: "Failed", message: message, buttonTitle: "Ok")

@@ -15,6 +15,8 @@
 		47294A01264E6431000551CD /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472949FF264E6431000551CD /* ProfileCell.swift */; };
 		47294A02264E6431000551CD /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47294A00264E6431000551CD /* ProfileCell.xib */; };
 		47294A09264E6A2A000551CD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A08264E6A2A000551CD /* ReusableView.swift */; };
+		47294A0C264E6E61000551CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A0B264E6E61000551CD /* User.swift */; };
+		47294A0F264E6F0C000551CD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A0E264E6F0C000551CD /* DataStore.swift */; };
 		474572C8264E439B00D762C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474572C7264E439B00D762C7 /* AppDelegate.swift */; };
 		474572CA264E439B00D762C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474572C9264E439B00D762C7 /* SceneDelegate.swift */; };
 		474572D1264E439C00D762C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474572D0264E439C00D762C7 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		472949FF264E6431000551CD /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		47294A00264E6431000551CD /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		47294A08264E6A2A000551CD /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		47294A0B264E6E61000551CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47294A0E264E6F0C000551CD /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		474572C4264E439B00D762C7 /* Take Home App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Home App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		474572C7264E439B00D762C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474572C9264E439B00D762C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				47294A08264E6A2A000551CD /* ReusableView.swift */,
+				47294A0E264E6F0C000551CD /* DataStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 		474572E1264E464E00D762C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				47294A0B264E6E61000551CD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47294A0F264E6F0C000551CD /* DataStore.swift in Sources */,
 				474572E9264E46E500D762C7 /* LoginViewModel.swift in Sources */,
 				474572E5264E46DA00D762C7 /* LoginViewController.swift in Sources */,
 				472949ED264E5C06000551CD /* UIViewController+Ext.swift in Sources */,
@@ -333,6 +340,7 @@
 				474572C8264E439B00D762C7 /* AppDelegate.swift in Sources */,
 				472949F1264E5D25000551CD /* HotelListViewController.swift in Sources */,
 				472949FA264E6354000551CD /* HotelCell.swift in Sources */,
+				47294A0C264E6E61000551CD /* User.swift in Sources */,
 				474572CA264E439B00D762C7 /* SceneDelegate.swift in Sources */,
 				472949F5264E5D31000551CD /* HotelListViewModel.swift in Sources */,
 				47294A01264E6431000551CD /* ProfileCell.swift in Sources */,
