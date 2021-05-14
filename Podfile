@@ -7,5 +7,5 @@ target 'Take Home App' do
 
   # Pods for Take Home App
 pod 'FBSDKLoginKit'
-
+pod 'SDWebImage', '~> 5.0'
 end
