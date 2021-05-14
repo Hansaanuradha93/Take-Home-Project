@@ -1,6 +1,8 @@
 import Foundation
 
 struct Hotel: Codable, Hashable {
+    
+    // MARK: Properties
     var image: Thumbnail?
     var title: String?
     var address: String?
@@ -10,6 +12,8 @@ struct Hotel: Codable, Hashable {
 }
 
 struct Thumbnail: Codable, Hashable {
+    
+    // MARK: Properties
     var small: String?
     var medium: String?
     var large: String?

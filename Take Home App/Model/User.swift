@@ -1,9 +1,12 @@
 import Foundation
 
 struct User {
+    
+    // MARK: Properties
     let fullName: String
     let email: String
     
+    // MARK: Initializers
     init(data: [String : AnyObject]) {
         let firstName = data["first_name"] as? String ?? ""
         let lastName = data["last_name"] as? String ?? ""
@@ -15,6 +18,10 @@ struct User {
         self.fullName = fullName
         self.email = email
     }
+}
+
+// MARK: - Methods
+extension User {
     
     func saveUser() {
         DataStore.shared.setFullName(value: fullName)

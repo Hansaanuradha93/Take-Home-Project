@@ -107,6 +107,10 @@ private extension HotelListViewController {
         viewModel.logOut { [weak self] status in
             guard let self = self else { return }
             if status {
+                // Remove saved data
+                DataStore.shared.removeAllData()
+                
+                // Redirect to Login Screen
                 let controller = LoginViewController.create(viewModel: LoginViewModel())
                 self.view.window?.rootViewController = UINavigationController(rootViewController: controller)
                 self.view.window?.makeKeyAndVisible()

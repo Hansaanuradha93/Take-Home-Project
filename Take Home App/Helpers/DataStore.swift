@@ -2,9 +2,15 @@ import Foundation
 
 class DataStore {
     
+    // MARK: Properties
     static let shared  = DataStore()
     
+    // MARK: Initializers
     private init(){}
+}
+
+// MARK: - Methods
+extension DataStore {
     
     func setFullName(value: String) {
         UserDefaults.standard.set(value, forKey: "full-name")
