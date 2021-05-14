@@ -38,6 +38,9 @@ private extension DetailsViewController {
     }
     
     func setupViews() {
+        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
+        
         var image = UIImage(systemName: "location.circle.fill")
         image = image?.withRenderingMode(.alwaysTemplate)
         image?.withTintColor(.black)

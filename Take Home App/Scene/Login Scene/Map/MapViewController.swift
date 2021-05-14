@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
     // MARK: Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         configureMap(to: viewModel.location, with: viewModel.hotel.title)
     }
 }
@@ -38,5 +39,10 @@ private extension MapViewController {
         self.mapView.addAnnotation(point)
         let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         self.mapView.setRegion(viewRegion, animated: true)
+    }
+    
+    func setupViews() {
+        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
     }
 }

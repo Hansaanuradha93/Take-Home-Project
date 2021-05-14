@@ -113,6 +113,7 @@ private extension HotelListViewController {
     }
     
     func setupUI() {
+        navigationController?.navigationBar.tintColor = UIColor.black
         navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
         title = viewModel.title
         
