@@ -33,7 +33,7 @@ class DetailsViewController: UIViewController {
 private extension DetailsViewController {
     
     @objc func addTapped() {
-        let controller = MapViewController.create(viewModel: MapViewModel())
+        let controller = MapViewController.create(viewModel: MapViewModel(hotel: viewModel.hotel))
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

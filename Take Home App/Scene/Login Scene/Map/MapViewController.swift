@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 class MapViewController: UIViewController {
 
@@ -17,10 +18,25 @@ class MapViewController: UIViewController {
     var viewModel: MapViewModel!
     
     // MARK: IBOutlets
+    @IBOutlet weak var mapView: MKMapView!
     
     // MARK: Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupViews()
+        configureMap(to: viewModel.location, with: viewModel.hotel.title)
+    }
+}
+
+// MARK: - Methods
+private extension MapViewController {
+    
+    func configureMap(to location: CLLocation, with title: String?) {
+        let point = MKPointAnnotation()
+        point.title = title ?? ""
+        point.coordinate = location.coordinate
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        self.mapView.addAnnotation(point)
+        let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
+        self.mapView.setRegion(viewRegion, animated: true)
     }
 }

@@ -5,6 +5,8 @@ struct Hotel: Codable, Hashable {
     var title: String?
     var address: String?
     var description: String?
+    var latitude: String?
+    var longitude: String?
 }
 
 struct Thumbnail: Codable, Hashable {
