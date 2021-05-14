@@ -105,9 +105,11 @@ private extension HotelListViewController {
     
     func logout() {
         viewModel.logOut { [weak self] status in
+            guard let self = self else { return }
             if status {
-                // TODO: change this
-                self?.navigationController?.popViewController(animated: true)
+                let controller = LoginViewController.create(viewModel: LoginViewModel())
+                self.view.window?.rootViewController = UINavigationController(rootViewController: controller)
+                self.view.window?.makeKeyAndVisible()
             }
         }
     }
