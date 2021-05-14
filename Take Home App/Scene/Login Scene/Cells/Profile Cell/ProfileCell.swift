@@ -6,7 +6,6 @@ class ProfileCell: UITableViewCell {
     static let reuseID = "ProfileCell"
     var buttonAction: (() -> Void)? = nil
 
-    
     // MARK: IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!

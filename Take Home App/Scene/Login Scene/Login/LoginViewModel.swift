@@ -3,9 +3,13 @@ import FBSDKLoginKit
 
 final class LoginViewModel {
     
+    // MARK: Properties
     let title = "Login"
     private let loginManager = LoginManager()
+}
 
+// MARK: - Methods
+extension LoginViewModel {
     
     func loginWithFacebook(controller: UIViewController, completion: @escaping(_ status: Bool, _ message: String, _ user: User?) -> Void) {
         let permissions = ["public_profile","email", "name"]
