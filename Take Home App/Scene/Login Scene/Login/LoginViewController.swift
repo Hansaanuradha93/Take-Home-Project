@@ -1,4 +1,5 @@
 import UIKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
@@ -35,6 +36,11 @@ private extension LoginViewController {
 //        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Login"
         
+        let loginButton = FBLoginButton()
+        loginButton.permissions = ["public_profile", "email"]
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        
 //        firstNameTextField.autocorrectionType = .no
 //        emailTextField.keyboardType = .emailAddress
 //        emailTextField.autocorrectionType = .no
@@ -43,3 +49,22 @@ private extension LoginViewController {
 //        signupButton.isEnabled = false
     }
 }
+
+
+//// Swift
+////
+//// Add this to the header of your file, e.g. in ViewController.swift
+//
+//import FBSDKLoginKit
+//
+//// Add this to the body
+//class ViewController: UIViewController {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        let loginButton = FBLoginButton()
+//        loginButton.center = view.center
+//        view.addSubview(loginButton)
+//    }
+//}
