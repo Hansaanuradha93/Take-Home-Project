@@ -33,6 +33,7 @@ extension ProfileCell {
     }
     
     private func setupViews() {
+        selectionStyle = .none
         logoutButton.layer.cornerRadius = 5
     }
 }
