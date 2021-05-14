@@ -1,9 +1,7 @@
 import UIKit
-import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
-        
     // MARK: Properties
     public class var storyboardName: String {
         return "Login"
@@ -19,52 +17,39 @@ class LoginViewController: UIViewController {
     var viewModel: LoginViewModel!
     
     // MARK: IBOutlets
-
+    @IBOutlet weak var loginButton: UIButton!
+    
     
     // MARK: Overriden Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
+    
+    // MARK: IBActions
+    @IBAction func loginbuttonTapped(_ sender: Any) {
+        loginWithFacebook()
+    }
 }
 
 // MARK: - Methods
 private extension LoginViewController {
     
+    func loginWithFacebook() {
+        viewModel.loginWithFacebook(controller: self) { [weak self] status, message in
+            guard let self = self else { return }
+            if status {
+                // TODO: go to next screen
+                print(message)
+            } else {
+                self.presentAlert(title: "Failed", message: message, buttonTitle: "Ok")
+            }
+        }
+    }
+    
     func setupUI() {
         navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
-//        navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Login"
-        
-        let loginButton = FBLoginButton()
-        loginButton.permissions = ["public_profile", "email"]
-        loginButton.center = view.center
-        view.addSubview(loginButton)
-        
-//        firstNameTextField.autocorrectionType = .no
-//        emailTextField.keyboardType = .emailAddress
-//        emailTextField.autocorrectionType = .no
-//        passwordTextField.isSecureTextEntry = true
-//        passwordTextField.autocorrectionType = .no
-//        signupButton.isEnabled = false
+        title = viewModel.title
+        loginButton.layer.cornerRadius = 5
     }
 }
-
-
-//// Swift
-////
-//// Add this to the header of your file, e.g. in ViewController.swift
-//
-//import FBSDKLoginKit
-//
-//// Add this to the body
-//class ViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        let loginButton = FBLoginButton()
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
-//    }
-//}
