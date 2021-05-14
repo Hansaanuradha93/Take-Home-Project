@@ -74,7 +74,9 @@ extension HotelListViewController: UITableViewDataSource {
 extension HotelListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let hotel = viewModel.hotels[indexPath.row]
+        let controller = DetailViewController.create(viewModel: DetailViewModel(hotel: hotel))
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
