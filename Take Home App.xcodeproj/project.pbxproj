@@ -22,6 +22,8 @@
 		47294A1B264E796F000551CD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A1A264E796F000551CD /* Response.swift */; };
 		47294A2E264E8268000551CD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A2D264E8268000551CD /* DetailViewModel.swift */; };
 		47294A32264E8626000551CD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A31264E8626000551CD /* DetailsViewController.swift */; };
+		47294A37264E89BF000551CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A36264E89BF000551CD /* MapViewController.swift */; };
+		47294A3B264E89DE000551CD /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294A3A264E89DD000551CD /* MapViewModel.swift */; };
 		474572C8264E439B00D762C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474572C7264E439B00D762C7 /* AppDelegate.swift */; };
 		474572CA264E439B00D762C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474572C9264E439B00D762C7 /* SceneDelegate.swift */; };
 		474572D1264E439C00D762C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 474572D0264E439C00D762C7 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		47294A1A264E796F000551CD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		47294A2D264E8268000551CD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		47294A31264E8626000551CD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		47294A36264E89BF000551CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		47294A3A264E89DD000551CD /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		474572C4264E439B00D762C7 /* Take Home App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Home App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		474572C7264E439B00D762C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474572C9264E439B00D762C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		47294A35264E89B1000551CD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				47294A36264E89BF000551CD /* MapViewController.swift */,
+				47294A3A264E89DD000551CD /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		474572BB264E439B00D762C7 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				472949F7264E632E000551CD /* Cells */,
+				47294A35264E89B1000551CD /* Map */,
 				47294A2C264E8250000551CD /* Detail */,
 				472949EF264E5CFF000551CD /* Hotel List */,
 				474572EB264E472900D762C7 /* Login */,
@@ -369,9 +383,11 @@
 				472949ED264E5C06000551CD /* UIViewController+Ext.swift in Sources */,
 				47457307264E4DF500D762C7 /* UIColor+Ext.swift in Sources */,
 				47294A09264E6A2A000551CD /* ReusableView.swift in Sources */,
+				47294A37264E89BF000551CD /* MapViewController.swift in Sources */,
 				474572C8264E439B00D762C7 /* AppDelegate.swift in Sources */,
 				47294A1B264E796F000551CD /* Response.swift in Sources */,
 				472949F1264E5D25000551CD /* HotelListViewController.swift in Sources */,
+				47294A3B264E89DE000551CD /* MapViewModel.swift in Sources */,
 				472949FA264E6354000551CD /* HotelCell.swift in Sources */,
 				47294A32264E8626000551CD /* DetailsViewController.swift in Sources */,
 				47294A0C264E6E61000551CD /* User.swift in Sources */,

@@ -32,7 +32,17 @@ class DetailsViewController: UIViewController {
 // MARK: - Methods
 private extension DetailsViewController {
     
+    @objc func addTapped() {
+        let controller = MapViewController.create(viewModel: MapViewModel())
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     func setupViews() {
+        var image = UIImage(systemName: "location.circle.fill")
+        image = image?.withRenderingMode(.alwaysTemplate)
+        image?.withTintColor(.black)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style:.plain, target: self, action: #selector(addTapped))
+
         imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         imageView.sd_setImage(with: URL(string: viewModel.hotel.image?.small ?? ""))
         titleLabel.text = viewModel.hotel.title ?? ""
