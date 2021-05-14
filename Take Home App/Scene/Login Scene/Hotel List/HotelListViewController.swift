@@ -75,7 +75,7 @@ extension HotelListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let hotel = viewModel.hotels[indexPath.row]
-        let controller = DetailViewController.create(viewModel: DetailViewModel(hotel: hotel))
+        let controller = DetailsViewController.create(viewModel: DetailsViewModel(hotel: hotel))
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
