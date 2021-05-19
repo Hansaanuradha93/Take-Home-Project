@@ -35,7 +35,7 @@ extension NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let hotelResponse = try decoder.decode(TakeHome<Hotel>.self, from: data)
+                let hotelResponse = try decoder.decode(TakeHomeResultsResponse<Hotel>.self, from: data)
 
                 completed(.success(hotelResponse.data))
             } catch(let error) {
