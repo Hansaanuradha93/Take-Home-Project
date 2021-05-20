@@ -1,6 +1,6 @@
 import Foundation
 
-struct TakeHome<T: Codable>: Codable {
+struct TakeHomeResultsResponse<T: Codable>: Codable {
     let status: Int
     let data: [T]
 }
