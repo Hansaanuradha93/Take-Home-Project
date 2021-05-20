@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471E4FC826540E83007D289B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E4FC726540E83007D289B /* Constants.swift */; };
 		472949ED264E5C06000551CD /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472949EC264E5C06000551CD /* UIViewController+Ext.swift */; };
 		472949F1264E5D25000551CD /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472949F0264E5D25000551CD /* HotelListViewController.swift */; };
 		472949F5264E5D31000551CD /* HotelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472949F4264E5D31000551CD /* HotelListViewModel.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		389F9E58FA4DD84FFCF8B331 /* Pods-Take Home App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Home App.debug.xcconfig"; path = "Target Support Files/Pods-Take Home App/Pods-Take Home App.debug.xcconfig"; sourceTree = "<group>"; };
+		471E4FC726540E83007D289B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		472949EC264E5C06000551CD /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		472949F0264E5D25000551CD /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		472949F4264E5D31000551CD /* HotelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 				E12E66B2A4B3BECC32B4FE2F /* Pods-Take Home App.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		471E4FC626540E74007D289B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				471E4FC726540E83007D289B /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		472949EF264E5CFF000551CD /* Hotel List */ = {
@@ -192,6 +202,7 @@
 			children = (
 				474572E1264E464E00D762C7 /* Model */,
 				474572E2264E466900D762C7 /* Scene */,
+				471E4FC626540E74007D289B /* Constants */,
 				47457305264E4DE400D762C7 /* Extensions */,
 				47294A07264E6A16000551CD /* Helpers */,
 				47294A12264E74E7000551CD /* Network */,
@@ -387,6 +398,7 @@
 				474572C8264E439B00D762C7 /* AppDelegate.swift in Sources */,
 				47294A1B264E796F000551CD /* Response.swift in Sources */,
 				472949F1264E5D25000551CD /* HotelListViewController.swift in Sources */,
+				471E4FC826540E83007D289B /* Constants.swift in Sources */,
 				47294A3B264E89DE000551CD /* MapViewModel.swift in Sources */,
 				472949FA264E6354000551CD /* HotelCell.swift in Sources */,
 				47294A32264E8626000551CD /* DetailsViewController.swift in Sources */,

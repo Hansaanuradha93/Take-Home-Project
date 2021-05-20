@@ -11,6 +11,7 @@ class HotelCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    // MARK: Override Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
