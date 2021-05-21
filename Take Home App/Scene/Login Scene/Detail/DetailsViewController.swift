@@ -42,13 +42,13 @@ private extension DetailsViewController {
         navigationController?.navigationBar.barTintColor = UIColor.appColor(.darkGreen)
         title = viewModel.title
 
-        var image = UIImage(systemName: "location.circle.fill")
-        image = image?.withRenderingMode(.alwaysTemplate)
-        image?.withTintColor(.black)
+        var image = Asserts.circleFill
+        image = image.withRenderingMode(.alwaysTemplate)
+        image.withTintColor(.black)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style:.plain, target: self, action: #selector(addTapped))
 
         imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        imageView.sd_setImage(with: URL(string: viewModel.hotel.image?.small ?? ""), placeholderImage: UIImage(systemName: "paperclip"))
+        imageView.sd_setImage(with: URL(string: viewModel.hotel.image?.small ?? ""), placeholderImage: Asserts.paperClip)
         titleLabel.text = viewModel.hotel.title ?? ""
         descriptionLabel.text = viewModel.hotel.description ?? ""
     }

@@ -3,7 +3,7 @@ import Foundation
 final class DetailsViewModel {
     
     // MARK: Properties
-    let title = "Details"
+    let title = Strings.details
     var hotel: Hotel
     
     // MARK: Initializers

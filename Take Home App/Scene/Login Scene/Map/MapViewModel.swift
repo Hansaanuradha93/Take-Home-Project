@@ -4,7 +4,7 @@ import MapKit
 final class MapViewModel {
     
     // MARK: Properties
-    let title = "Map"
+    let title = Strings.map
     var hotel: Hotel!
     var location: CLLocation!
     
