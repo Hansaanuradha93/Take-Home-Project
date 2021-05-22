@@ -4,7 +4,7 @@ import FBSDKLoginKit
 final class HotelListViewModel {
     
     // MARK: Properties
-    let title = "List View"
+    let title = Strings.listView
     var user: User? = nil
     var hotels: [Hotel] = []
     
