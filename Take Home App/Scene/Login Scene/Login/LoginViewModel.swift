@@ -4,7 +4,7 @@ import FBSDKLoginKit
 final class LoginViewModel {
     
     // MARK: Properties
-    let title = "Login"
+    let title = Strings.login
     private let loginManager = LoginManager()
 }
 
@@ -24,8 +24,8 @@ extension LoginViewModel {
             
             // Check for cancel
             guard let result = result, !result.isCancelled else {
-                print("User cancelled login")
-                completion(false, "User cancelled login", nil)
+                print(Strings.userCanceledLogin)
+                completion(false, Strings.userCanceledLogin, nil)
                 return
             }
                       
@@ -38,7 +38,7 @@ extension LoginViewModel {
             graphRequest.start { (connection, result, error) -> Void in
                 if error != nil {
                     print(error!.localizedDescription)
-                    completion(false, "Profile data not found", nil)
+                    completion(false, Strings.profileDataNotFound, nil)
                 }
                 
                 if let result = result {
@@ -46,7 +46,7 @@ extension LoginViewModel {
                     let user = User(data: data)
                     
                     // Successfully logged in
-                    completion(true, "Logged in Successfully", user)
+                    completion(true, Strings.loggedInSuccessfully, user)
                 }
             }
         }
