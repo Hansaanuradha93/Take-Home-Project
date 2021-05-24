@@ -42,7 +42,7 @@ private extension LoginViewController {
                 user.saveUser()
                 self.navigateToHotelList()
             } else {
-                self.presentAlert(title: "Failed", message: message, buttonTitle: "Ok")
+                self.presentAlert(title: Strings.failed, message: message, buttonTitle: Strings.ok)
             }
         }
     }
