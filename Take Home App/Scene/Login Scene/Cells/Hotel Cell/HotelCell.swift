@@ -16,7 +16,6 @@ class HotelCell: UITableViewCell {
         super.awakeFromNib()
         setupViews()
     }
-    
 }
 
 // MARK: - Methods
